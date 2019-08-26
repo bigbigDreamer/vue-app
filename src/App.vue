@@ -8,7 +8,7 @@
         <publish-comment @changeComment="changeComment"/>
       </div>
       <div class="right">
-        <p v-if="hasComment">暂无人评论,来谈谈你的看法叭</p>
+        <p v-if="hasComment" class="tip">暂无人评论,来谈谈你的看法叭</p>
         <comment-list :commentList="commentList" @delComment="delComment"/>
       </div>
     </div>
@@ -49,6 +49,7 @@
             }
         },
         watch: {
+            //监视评论列表长度变化，显隐无评论区域
             commentList: function (val) {
                 console.log(val)
                 if(val.length) {
@@ -83,7 +84,7 @@
         flex-basis: 400px;
         margin: 0 auto;
 
-        p {
+        p.tip {
           font-size: 18px ;
           text-decoration-line: underline;
         }

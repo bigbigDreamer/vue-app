@@ -27,14 +27,18 @@
         methods: {
             //发布评论
             publish() {
-                this.$emit("changeComment", {
-                    id: this.id++,
-                    name: this.comment,
-                    content: this.commentContent
-                });
-                //置空内容
-                this.comment = '';
-                this.commentContent = '';
+                if(!!this.comment&&!!this.commentContent){
+                    this.$emit("changeComment", {
+                        id: this.id++,
+                        name: this.comment,
+                        content: this.commentContent
+                    });
+                    //置空内容
+                    this.comment = '';
+                    this.commentContent = '';
+                } else {
+                    alert("小哥哥，恶作剧可不太好昂~~~")
+                }
             }
         }
     }
