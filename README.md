@@ -1,4 +1,8 @@
-# fullvue
+# vue-app
+
+## Introduce
+
+> 简单的练习一下Vue，从最简单的评论开始。为了对比学习React。
 
 ## Project setup
 ```
@@ -24,29 +28,10 @@ npm run test
 ```
 npm run lint
 ```
+## Effect
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![alt](./src/assets/vue.gif)
 
-### 这里弱弱介绍一下eslint关闭方法
 
-- 使用配置文件来选择禁用范围
-创建文件.eslintignore
-加入如下内容
 
-**/*.js
-
-**/*.vue
-
-- 禁用下一行
-
-// eslint-disable-next-line to ignore the next line.
-
-console.log("这行esline不检查")
-
-- 禁用整个js文件
-
-/* eslint-disable */
-
-console.log("整个文件都忽略eslint检查")
 
