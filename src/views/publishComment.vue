@@ -31,7 +31,10 @@
                     id: this.id++,
                     name: this.comment,
                     content: this.commentContent
-                })
+                });
+                //置空内容
+                this.comment = '';
+                this.commentContent = '';
             }
         }
     }
